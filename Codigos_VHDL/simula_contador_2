@@ -1,0 +1,55 @@
+vsim work.contador
+
+add wave *
+
+force up_dw 1
+force mx_mi 1
+force step 0
+force load 1
+
+force clk 0 0 ns, 1 0.125 ns -repeat 0.25 ns
+
+force clr 0
+
+run 0.5 ns
+
+force clr 1
+
+
+
+
+
+run 10 ns;
+
+force mx_mi 1
+force A2 "0001"
+force A1 "0000"
+force A0 "0000"
+force load 0
+run 2 ns
+force load 1
+run 2 ns
+
+
+force mx_mi 0
+force A2 "0000"
+force A1 "0101"
+force A0 "0000"
+force load 0
+run 2 ns
+force load 1
+run 2 ns
+
+
+force step 1
+force A0 "0001"
+force load 0
+run 2 ns
+
+force load 1
+force step 0
+run 2 ns
+
+force up_dw 1
+
+run 20 ns

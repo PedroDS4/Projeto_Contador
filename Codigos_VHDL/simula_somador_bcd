@@ -1,0 +1,10 @@
+vsim work.somador_bcd
+
+add wave *
+
+force A "000000000001"
+force B "000000001000"
+
+force c_i 0
+
+run 10ns
