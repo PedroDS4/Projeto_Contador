@@ -105,7 +105,7 @@ Ele também pode dividir a frequência de entrada (divisor de frequência). Veja
 Muito utilizado em registradores, o flip-flop D armazena bits de forma seletiva [2]. A equação característica:
 
 $$
-Q^{i+1} = D \cdot clk^{\rightarrow}
+Q^{i+1} = D \cdot clk^{\uparrow}
 $$
 
 Ou seja, a saída é igual à entrada nas bordas de subida.
@@ -224,7 +224,7 @@ $$ D = \overline{ load } \cdot Q + load \cdot I $$
 
 Porém a saída do registrador é o valor da entrada, apenas nas bordas de subida, assim
 
-$$ Q^{i+1} = (\overline{ load } \cdot Q^i + load \cdot I) \cdot clk^{\rightarrow} $$
+$$ Q^{i+1} = (\overline{ load } \cdot Q^i + load \cdot I) \cdot clk^{\uparrow} $$
 
 Ou seja, o valor $Q$ guardado no registrador so vai ser determinado pela entrada I quando a entrada $load$ estiver ativa e houver uma borda de subida, e isso é a forma fundamental de armazenamento de bits.
 
@@ -262,7 +262,7 @@ A configuração do flip-flop JK como dobrador de frequência é mostrada na fig
 
 Aplicando a equação característica do flip-flop nessa configuração, temos
 
-$$ Q^{\text{i+1}} = 1 \cdot \overline{Q^i} + \overline{1} \cdot Q^{i} = \overline{Q^i} \cdot clk^{\rightarrow} $$
+$$ Q^{\text{i+1}} = 1 \cdot \overline{Q^i} + \overline{1} \cdot Q^{i} = \overline{Q^i} \cdot clk^{\uparrow} $$
 
 Ou seja, se demora um período $T$ para a borda de subida acontecer, irá demorar T segundos para a saída ir do positivo pro negativo ou vice versa, ou seja, um ciclo completo agora se dará em um período de $2T$, assim, se o período é dobrado, a frequência é dividida por 2, então temos finalmente a relação fundamental do divisor de frequência:
 
