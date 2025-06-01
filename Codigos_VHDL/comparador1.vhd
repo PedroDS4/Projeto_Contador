@@ -23,8 +23,8 @@ begin
     menor_bit <= not(A) and B;
  
 	
-    -- lógica de propagação
+    -- lÃ³gica de propagaÃ§Ã£o
     maior <= (maior_in or (igual_in and maior_bit));
     igual <= (igual_in and igual_bit);
-    menor <= (menor_in or (igual_in and menor_in));
+    menor <= (menor_in or (igual_in and menor_bit));
 end CKT;
