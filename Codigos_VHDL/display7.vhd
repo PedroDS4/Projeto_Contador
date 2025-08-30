@@ -12,7 +12,7 @@ architecture CKT of display7 is
     signal x : std_logic_vector(0 to 17);
 begin
     x(0) <= A;
-    x(1) <= B;
+    x(1) <= not(B) and C;
     x(2) <= C;
     x(3) <= not A and C;
     x(4) <= not B and not D;
@@ -36,5 +36,6 @@ begin
     l(3) <= not(x(0) or x(11) or x(12) or x(13) or x(14));
     l(4) <= not(x(11) or x(15) or x(16) or x(12));
     l(5) <= not(x(0) or x(6) or x(9) or x(17));
-    l(6) <= not(x(0) or x(1) or x(2));
+    l(6) <= not(x(0) or x(17) or x(12) or x(1));
+
 end CKT;
